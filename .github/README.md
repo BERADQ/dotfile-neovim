@@ -24,12 +24,8 @@
   </div>
 
 ## Showcase
+![image](https://github.com/BERADQ/dotfile-neovim/assets/78293733/e1099840-422d-423c-88f7-ea5408d7b6d0)
 
-<img src="https://nvchad.com/features/nvdash.webp">
-<img src="https://nvchad.com/banner.webp">
-
-<img src="https://nvchad.com/screenshots/onedark.webp">
-<img src="https://nvchad.com/screenshots/rxyhn1.webp">
 
 ## What is it?
 
