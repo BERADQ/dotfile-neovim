@@ -9,3 +9,5 @@
 if vim.g.neovide then
   require"custom.configs.neovide"
 end
+
+vim.wo.relativenumber = true

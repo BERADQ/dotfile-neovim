@@ -56,20 +56,20 @@ local plugins = {
         { "s",  "<Plug>(leap-forward)",     "Leap forward" },
         { "S",  "<Plug>(leap-backward)",    "Leap backward" },
       }
-        for _, map in pairs(maps) do
-          vim.keymap.set({ "n", "x", "o" }, map[1], map[2], { silent = true, desc = map[3] })
-        end
+      for _, map in pairs(maps) do
+        vim.keymap.set({ "n", "x", "o" }, map[1], map[2], { silent = true, desc = map[3] })
+      end
     end,
   },
 
   {
     "kylechui/nvim-surround",
     event = "VeryLazy",
-    config = function ()
-      require("nvim-surround").setup({
+    config = function()
+      require("nvim-surround").setup {
         -- none
-      })
-    end
+      }
+    end,
   },
   -- To make a plugin not be loaded
   -- {
