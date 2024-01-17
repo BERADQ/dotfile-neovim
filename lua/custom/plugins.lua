@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -47,6 +47,30 @@ local plugins = {
     end,
   },
 
+  {
+    "ggandor/leap.nvim",
+    lazy = false,
+    config = function()
+      local maps = {
+        { "gs", "<Plug>(leap-from-window)", "Leap forward" },
+        { "s",  "<Plug>(leap-forward)",     "Leap forward" },
+        { "S",  "<Plug>(leap-backward)",    "Leap backward" },
+      }
+        for _, map in pairs(maps) do
+          vim.keymap.set({ "n", "x", "o" }, map[1], map[2], { silent = true, desc = map[3] })
+        end
+    end,
+  },
+
+  {
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
+    config = function ()
+      require("nvim-surround").setup({
+        -- none
+      })
+    end
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
