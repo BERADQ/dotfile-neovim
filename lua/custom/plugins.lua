@@ -71,6 +71,10 @@ local plugins = {
       }
     end,
   },
+  {
+    "lbrayner/vim-rzip",
+    lazy = false,
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
