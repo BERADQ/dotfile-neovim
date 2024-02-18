@@ -51,14 +51,7 @@ local plugins = {
     "ggandor/leap.nvim",
     lazy = false,
     config = function()
-      local maps = {
-        { "gs", "<Plug>(leap-from-window)", "Leap forward" },
-        { "s",  "<Plug>(leap-forward)",     "Leap forward" },
-        { "S",  "<Plug>(leap-backward)",    "Leap backward" },
-      }
-      for _, map in pairs(maps) do
-        vim.keymap.set({ "n", "x", "o" }, map[1], map[2], { silent = true, desc = map[3] })
-      end
+      require("core.utils").load_mappings "leap"
     end,
   },
 
@@ -74,6 +67,13 @@ local plugins = {
   {
     "lbrayner/vim-rzip",
     lazy = false,
+  },
+  {
+    "mrcjkb/rustaceanvim",
+    ft = { "rust" },
+    config = function()
+      require("core.utils").load_mappings "rust"
+    end,
   },
   -- To make a plugin not be loaded
   -- {
