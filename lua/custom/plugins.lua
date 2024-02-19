@@ -71,6 +71,7 @@ local plugins = {
   {
     "mrcjkb/rustaceanvim",
     ft = { "rust" },
+    enabled = false,
     config = function()
       require("core.utils").load_mappings "rust"
     end,

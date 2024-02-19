@@ -8,26 +8,10 @@ M.disabled = {
 M.rust = {
   plugin = true,
   n = {
-    ["<leader>ca"] = {
-      "<cmd>RustLsp codeAction<CR>",
-      "Rust Code Action",
-      opts = { silent = true },
-    },
     ["<leader>rr"] = {
       "<cmd>RustLsp runnables<CR>",
       "Rust Runnables",
       opts = { silent = true },
-    },
-    ["<leader>ra"] = {
-      function()
-        local new_name = vim.fn.input "New Name: "
-        if new_name and #new_name > 0 then
-          vim.lsp.buf.rename(new_name)
-        else
-          print "别给空值啊……"
-        end
-      end,
-      "Rust Rename",
     },
   },
 }
